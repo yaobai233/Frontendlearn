@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!--这行代码会强制地让手机浏览器采用它们真实可视窗口的宽度来加载网页（有些手机浏览器会提供不真实的可视窗口宽度, 
+    然后加载比浏览器真实可视窗口的宽度大的宽度的网页，然后再缩小加载的页面，这样的做法对响应式图片或其他设计，
+    没有任何帮助。我们会在未来的模块教给你更多关于这方面的知识）。 -->
+  <meta name="viewport" content="width=device-width"> 
+  <title>Mozilla splash page</title>
+  <meta name="viewport" content="width=device-width">
+  <title>Mozilla 宣传主页</title>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:400,700" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <h1>Mozilla</h1>
+    <!-- 插入 <img> 元素，链接至较小的 Firefox 标志。 -->
+    <img src="originals//firefox_logo-only_RGB.png" alt="Firefox logo">
+  </header>
+
+  <main>
+    <article>
+      <!-- 插入来自 Bilibili 的 <iframe> 元素 -->
+      <iframe src="https://player.bilibili.com/player.html?aid=3303261&bvid=BV1rs411d7hC&cid=5221343&page=2" scrolling="no"
+        border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="400px" height="225"> </iframe>
+
+      <h2>自由网络 尽情驰骋</h2>
+
+      <p>Mozilla 是一个全球社区，这里聚集着来自五湖四海的 技术人员、思考者、建造者。我们致力于让 Internet
+        保持活力，保持畅通，人人皆可贡献，人人皆可创造。我们坚信：开放平台的协作对于人的发展至关重要，也决定着我们共同的未来。</p>
+
+      <p>更多精彩信息，敬请点击下方图片。<a href="https://www.flickr.com/photos/mathiasappel/21675551065/">小熊猫照片</a>由 Mathias Appel 拍摄
+      </p>
+    </article>
+
+    <div class="further-info">
+      <!-- 插入包含 srcsets 和 sizes 属性的图像 -->
+      <a href="https://www.mozilla.org/zh-CN/firefox/new/">
+        <img srcset="originals/firefox_logo120.png 120w,originals/firefox_logo-only_RGB.png 400w"
+          sizes="(max-width:580px) 120px,400px" src="originals/firefox_logo-only_RGB.png" alt="firefox_logo400 pic">
+      </a>
+      <a href="https://www.mozilla.org/">
+        <img srcset="originals/mozilla-dinosaur-head120.png 120w,originals/mozilla-dinosaur-head.png 400w"
+          sizes="(max-width:580px) 120px,400px" src="originals/mozilla-dinosaur-head.png" alt="dinosaur">
+      </a>
+      <a href="https://addons.mozilla.org/">
+        <img srcset="originals/firefox-addons120.jpg 120w,originals/firefox-addons.jpg 400w"
+          sizes="(max-width:580px) 120px,400px" src="originals/firefox-addons.jpg" alt="addons">
+      </a>
+      <a href="https://developer.mozilla.org/zh-CN/">
+        <img src="images/mdn.svg" alt="访问mdn，学习web开发">
+      </a>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="red-panda">
+      <!-- 插入照片元素 -->
+      <picture>
+        <source media="(max-width:600px)" srcset="originals/red-panda600.jpg" />
+        <img src="originals/red-panda1200.jpg" alt="red-panda" />
+      </picture>
+    </div>
+
+  </main>
+  <p id="demo">单击按钮来显示这个窗口的高度和宽度(不包括工具栏和滚动条). .</p>
+  <button onclick="myFunction()">点我</button>
+     <script>
+        function myFunction(){
+        var w=window.innerWidth;
+        var h=window.innerHeight;
+        x=document.getElementById("demo");
+        x.innerHTML="Width: " + w + " Heigth: " + h;
+        }
+    </script>
+</body>
+
+</html>
